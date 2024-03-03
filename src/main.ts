@@ -122,6 +122,8 @@ let currentChat : string | null = null;
 
 const stickerID = /stickerId\s([0-9]+)/;
 
+import avatarPng from "/avatar.png";
+
 function showDatabase() {
 	const navList = document.getElementById("navList") as HTMLDivElement;
 	if (!currentDatabase) {
@@ -343,7 +345,7 @@ function feedChat() {
 				const avatar = document.createElement("div");
 				avatar.classList.add("avatar");
 				const img = document.createElement("img");
-				img.src = "/avatar.png";
+				img.src = avatarPng;
 				avatar.appendChild(img);
 				rowFrom.appendChild(avatar);
 			} else {
