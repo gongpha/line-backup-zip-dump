@@ -1,0 +1,113 @@
+.chatCol {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	gap: 10px;
+}
+
+.message-date {
+	background-color: #00000008;
+    border: 1px solid #0000;
+    border-radius: 16px;
+    color: #949494;
+    display: inline-flex;
+    font-size: 16px;
+    padding: 3px 12px;
+}
+
+.message-balloon {
+	word-wrap: break-word;
+    background-color: #efefef;
+    border-radius: 17.5px;
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-direction: column;
+    font-size: inherit;
+    max-width: 690px;
+    padding: 8px 12px;
+    position: relative;
+    -webkit-user-select: text;
+    user-select: text;
+    word-break: break-word;
+	width: fit-content;
+}
+
+.row-from-me {
+	margin-left: auto;
+	display: inline-flex;
+	gap: 10px;
+}
+
+.row-from-them {
+	display: inline-flex;
+	gap: 10px;
+}
+
+.from-me {
+	background-color: #c3f69d;
+	text-align: end;
+}
+
+.from-me-tail::before {
+	mask-image: url(/public/icon_tale.svg);
+	background-color: inherit;
+    content: "";
+    height: 12px;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    width: 12px;
+	left: auto;
+    right: -3px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.from-them {
+	background-color: #efefef;
+	text-align: start;
+}
+
+.from-them-tail::before {
+	mask-image: url(/public/icon_tale.svg);
+	background-color: inherit;
+    content: "";
+    height: 12px;
+    left: -3px;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    width: 12px;
+}
+
+.meta-text {
+	color: #0000004d;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    font-size: 12px;
+    justify-content: flex-end;
+    line-height: 14px;
+    position: relative;
+}
+
+.avatar {
+	height: 40px;
+	width: 40px;
+}
+
+.avatar img {
+	height: 100%;
+	border-radius: 50%;
+}
+
+.avatar-gap {
+	margin-left: 48px;
+}
+
+.message-image img {
+	border-radius: 5px;
+}
