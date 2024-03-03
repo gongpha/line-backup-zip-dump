@@ -50,7 +50,7 @@
 }
 
 .from-me-tail::before {
-	mask-image: url(/public/icon_tale.svg);
+	mask-image: url(/icon_tale.svg);
 	background-color: inherit;
     content: "";
     height: 12px;
