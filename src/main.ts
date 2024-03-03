@@ -28,7 +28,6 @@ function success(txt : string) {
 
 function dump() {
 	const zipFile = document.getElementById("zipFile") as HTMLInputElement;
-	const zip = new JSZip;
 	const files = zipFile.files;
 	if (!files || files.length != 1) {
 		error("You must select a single file");
@@ -344,7 +343,7 @@ function feedChat() {
 				const avatar = document.createElement("div");
 				avatar.classList.add("avatar");
 				const img = document.createElement("img");
-				img.src = "/public/avatar.png";
+				img.src = "/avatar.png";
 				avatar.appendChild(img);
 				rowFrom.appendChild(avatar);
 			} else {

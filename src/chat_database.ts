@@ -158,9 +158,8 @@ function bruteforceDatabase(buf : ArrayBuffer, extra : ArrayBuffer, begin_iv : n
 			//console.log(key)
 			
 			const plaintxt = CryptoJS.AES.decrypt(
-				{
-					ciphertext: CryptoJS.lib.WordArray.create(ciphertext)
-				},
+				// @ts-ignore
+				{ ciphertext: CryptoJS.lib.WordArray.create(ciphertext) },
 				CryptoJS.lib.WordArray.create(key),
 				{
 					mode: CryptoJS.mode.ECB
@@ -217,9 +216,8 @@ function bruteforceDatabase(buf : ArrayBuffer, extra : ArrayBuffer, begin_iv : n
 		let i = 0;
 
 		const dbbufword = CryptoJS.AES.decrypt(
-			{
-				ciphertext: CryptoJS.lib.WordArray.create(buf)
-			},
+			// @ts-ignore
+			{ ciphertext: CryptoJS.lib.WordArray.create(buf) },
 			CryptoJS.lib.WordArray.create(key),
 			{
 				mode: CryptoJS.mode.ECB
